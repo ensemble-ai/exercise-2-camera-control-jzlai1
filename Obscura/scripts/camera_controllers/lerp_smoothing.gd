@@ -35,7 +35,6 @@ func update_camera_position(delta: float) -> void:
 		var movement_speed = follow_speed
 		if target.velocity == Vector3.ZERO:
 			movement_speed = catchup_speed
-
 		var move_distance = min(movement_speed * delta, distance_to_target)
 		position = position.move_toward(target_position, move_distance)
 
